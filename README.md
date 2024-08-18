@@ -18,7 +18,7 @@ Followed by that, we have implemented a CNN model, that we finetuned on the orig
 
 After performing those tests on the CNN implemented model, we decided to make use of transfer learning to end uo with a model that predicts best results for all emotions.
 
-For that, a scientific research models' architectures review, frow our choices of the following three models to test : 
+For that, a scientific research models' architectures review, frow our choices of the following 3 models to test : 
 - ResNet
 - VGG
 - InceptionV3 (was attempted)
