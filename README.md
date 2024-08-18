@@ -29,15 +29,17 @@ The filters choices, color spaces, models, are all explained in the notebooks fe
 
 ## III. Results and Interpretations:
 ### 1. Results of comparison of color spaces Datasets:
-a. Grayscale:
-- Gives good results for fear and very good results for happy
-- Tends to have high fear recall, many emotions are mistakenly classified as fear.
-b. YcrCb:
-- Gives good results for neutral
-- Tends to mistake some neutral for sad or happy.
-c. YES:
-- Mistakes Angry for Happy
-- Gives good results for angry dataset overall
+#### a. Grayscale:
+  - Gives good results for fear and very good results for happy
+  - Tends to have high fear recall, many emotions are mistakenly classified as fear.
+
+#### b. YcrCb:
+  - Gives good results for neutral
+  - Tends to mistake some neutral for sad or happy.
+    
+#### c. YES:
+  - Mistakes Angry for Happy
+  - Gives good results for angry dataset overall
   
 ==> For the same base model, different image treatements with color shift makes te model better at identifying a certain emotion, therefore, including the whole modified dataset as input even to a single model, should give a complete result with good accuracy.
 
