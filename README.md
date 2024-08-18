@@ -12,7 +12,7 @@ Research papers show that the following color spaces help the models detect faci
 - YCbCr color space
 
 Hence we have performed data transformations of our initial grayscale dataset to these two color spaces, obtaining two additional datasets each for one color space.
-In addition to that, we have applied a set of filter for Edge detection, and ended up with a 3rd dataset of edge filtered images with distinct edges.
+In addition to that, we have applied a set of filters for Edge detection, and ended up with a 3rd dataset of edge filtered images with distinct edges.
 
 Followed by that, we have implemented a CNN model, that we finetuned on the original grayscale datato reach optimal performance. After that, we have tested the model's performance on the three other transformed datasets ( YES dataset, YCbCr dataset, Edge detection dataset) and evaluated the model's performance for each of them to determine which helps the model detect facial expressions more accurately.
 
@@ -25,7 +25,7 @@ For that, a scientific research models' architectures review, frow our choices o
 
 We have tested each of these models separately on our datasets, determined that some of them perform better for certain emotions, where some other models fail, and excel at other emotions. In other words, we have found that our CNN model, and some of the pretrained models are complementary, therefore, we decided to concatenate them to end with a model that has optimal accuracy for all 7 emotions.
 
-The filters choices, color spaces, models, are all explained in the notebooks featuring our work.
+Further choices explanations of the filters choices, color spaces, models, are all present in the presentation (pages 14 to 23 & Page 30) and in the Data_PreProcessing_Emotions_Recognition.
 
 ## III. Results and Interpretations:
 ### 1. Results of comparison of color spaces Datasets:
