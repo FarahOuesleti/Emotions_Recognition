@@ -6,6 +6,7 @@ Our aim is to have a model that predicts human emotions based on facial expressi
 Our base input dataset is a set of low quality images in grayscale featuring the 7 emotions. The data is labeled. We chose a supervised learning approach.
 
 ## II. Project Approach:
+Since the data is of relatively low quality, we opted for a Gaussian deblurring effect. 
 Research papers show that the following color spaces help the models detect facial expressions features more distinctly : 
 - YES color space
 - YCbCr color space
@@ -20,13 +21,34 @@ After performing those tests on the CNN implemented model, we decided to make us
 For that, a scientific research models' architectures review, frow our choices of the following three models to test : 
 - ResNet
 - VGG
-- j
+- InceptionV3 (was attempted)
 
 We have tested each of these models separately on our datasets, determined that some of them perform better for certain emotions, where some other models fail, and excel at other emotions. In other words, we have found that our CNN model, and some of the pretrained models are complementary, therefore, we decided to concatenate them to end with a model that has optimal accuracy for all 7 emotions.
 
 The filters choices, color spaces, models, are all explained in the notebooks featuring our work.
 
-## III. Further Details:
+## III. Results and Interpretations:
+### 1. Results of comparison of color spaces Datasets:
+a. Grayscale:
+- Gives good results for fear and very good results for happy
+- Tends to have high fear recall, many emotions are mistakenly classified as fear.
+b. YcrCb:
+- Gives good results for neutral
+- Tends to mistake some neutral for sad or happy.
+c. YES:
+- Mistakes Angry for Happy
+- Gives good results for angry dataset overall
+  
+==> For the same base model, different image treatements with color shift makes te model better at identifying a certain emotion, therefore, including the whole modified dataset as input even to a single model, should give a complete result with good accuracy.
+
+### 2. Results of comparison of Models (separately):
+After finetuning, VGG performs better than ResNet, especially on 'Surprise' emotion. (Further details can be found in the notebooks)
+
+The comparison of several finetuned concatenated models, resulted in the choice of the following concatenation: 
+**Base finetuned CNN model + Vgg finetuned**
+
+
+## IV. Further Details:
 - Feature extraction
 Based on the businees understanding:
 
